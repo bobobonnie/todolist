@@ -15,6 +15,7 @@
     <ul>
       <li v-for="todo in todos">{{todo.content}} -<button type="button" v-model="newTodo" @click="removeTodo(todo)">delete</button> </li>
       </ul>
+      <img :src="imgurl"> <!-- 对应app中的imgurl-->
   </div>
   
   
@@ -27,7 +28,8 @@ var app = new Vue({
   data:{
     todos:[],
     newTodo:'',
-    message: 'apple'
+    message: 'apple',
+    imgurl:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9r7VipKOPwv9vzPTSdW3H-KTRvcW2pkvX3K2yj9_MF718tZp8Mg'// 图片位址
     
   },
   methods:{
